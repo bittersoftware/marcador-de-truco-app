@@ -44,8 +44,6 @@ public class ScoreFragment extends Fragment {
     private int mPlacarDois = 0;
     private int mVitoriasUm = 0;
     private int mVitoriasDois = 0;
-    private int mUltimaRodadaUm = 0;
-    private int mUltimaRodadaDois = 0;
     private int rodada = 1;
     private int mMaxRounOpt = 0;
     private int mRoundIndex = 0;
@@ -74,8 +72,6 @@ public class ScoreFragment extends Fragment {
             mPlacarDois = savedInstanceState.getInt("mPlacarDois");
             mVitoriasUm = savedInstanceState.getInt("mVitoriasUm");
             mVitoriasDois = savedInstanceState.getInt("mVitoriasDois");
-            mUltimaRodadaUm = savedInstanceState.getInt("mUltimaRodadaUm");
-            mUltimaRodadaDois = savedInstanceState.getInt("mUltimaRodadaDois");
             rodada = savedInstanceState.getInt("rodada");
             mMaxRounOpt = savedInstanceState.getInt("mMaxRounOpt");
             mRoundIndex = savedInstanceState.getInt("mRoundIndex");
@@ -167,7 +163,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarUm = mPlacarUm + 1;
-                mUltimaRodadaUm = 1;
                 placar_Um.setText("" + checkScore(mPlacarUm));
                 placar_Um.startAnimation(anim1);
                 button_um1.startAnimation(animbutton);
@@ -179,7 +174,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarUm = mPlacarUm + 3;
-                mUltimaRodadaUm = 3;
                 placar_Um.setText("" + checkScore(mPlacarUm));
                 placar_Um.startAnimation(anim1);
                 button_tres1.startAnimation(animbutton);
@@ -191,7 +185,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarUm = mPlacarUm + 6;
-                mUltimaRodadaUm = 6;
                 placar_Um.setText("" + checkScore(mPlacarUm));
                 placar_Um.startAnimation(anim1);
                 button_seis1.startAnimation(animbutton);
@@ -204,7 +197,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarUm = mPlacarUm + 9;
-                mUltimaRodadaUm = 9;
                 placar_Um.setText("" + checkScore(mPlacarUm));
                 placar_Um.startAnimation(anim1);
                 button_nove1.startAnimation(animbutton);
@@ -216,7 +208,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarUm = mPlacarUm + 12;
-                mUltimaRodadaUm = 12;
                 placar_Um.setText("" + checkScore(mPlacarUm));
                 button_doze1.startAnimation(animbutton);
                 updatePoints(mPlacarUm, mPlacarDois);
@@ -228,7 +219,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarDois = mPlacarDois + 1;
-                mUltimaRodadaDois = 1;
                 placar_Dois.setText("" + checkScore(mPlacarDois));
                 placar_Dois.startAnimation(anim2);
                 button_um2.startAnimation(animbutton);
@@ -241,7 +231,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarDois = mPlacarDois + 3;
-                mUltimaRodadaDois = 3;
                 placar_Dois.setText("" + checkScore(mPlacarDois));
                 placar_Dois.startAnimation(anim2);
                 button_tres2.startAnimation(animbutton);
@@ -253,7 +242,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarDois = mPlacarDois + 6;
-                mUltimaRodadaDois = 6;
                 placar_Dois.setText("" + checkScore(mPlacarDois));
                 placar_Dois.startAnimation(anim2);
                 button_seis2.startAnimation(animbutton);
@@ -265,7 +253,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarDois = mPlacarDois + 9;
-                mUltimaRodadaDois = 9;
                 placar_Dois.setText("" + checkScore(mPlacarDois));
                 placar_Dois.startAnimation(anim2);
                 button_nove2.startAnimation(animbutton);
@@ -277,7 +264,6 @@ public class ScoreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mPlacarDois = mPlacarDois + 12;
-                mUltimaRodadaDois = 12;
                 placar_Dois.setText("" + checkScore(mPlacarDois));
                 placar_Dois.startAnimation(anim2);
                 button_doze2.startAnimation(animbutton);
@@ -606,18 +592,19 @@ public class ScoreFragment extends Fragment {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
 
-                            if (mPlacarUm >= 12) {
-                                mPlacarUm = mPlacarUm - mUltimaRodadaUm;
-                            }
-                            if (mPlacarDois >= 12) {
-                                mPlacarDois = mPlacarDois - mUltimaRodadaDois;
-                            }
-
                             RoundHistoryA.remove(mRoundIndex);
                             RoundHistoryB.remove(mRoundIndex);
                             roundListed.remove(mRoundIndex);
 
                             mRoundIndex--;
+
+                            if (mPlacarUm >= 12) {
+                                mPlacarUm = RoundHistoryA.get(mRoundIndex);
+
+                            }
+                            if (mPlacarDois >= 12) {
+                                mPlacarDois = RoundHistoryB.get(mRoundIndex);
+                            }
 
                             try {
                                 ScoreFragment.getInstace().updateTheTextView();
@@ -966,8 +953,6 @@ public class ScoreFragment extends Fragment {
         outState.putInt("mPlacarDois", mPlacarDois);
         outState.putInt("mVitoriasUm", mVitoriasUm);
         outState.putInt("mVitoriasDois", mVitoriasDois);
-        outState.putInt("mUltimaRodadaUm", mUltimaRodadaUm);
-        outState.putInt("mUltimaRodadaDois", mUltimaRodadaDois);
         outState.putInt("rodada", rodada);
         outState.putInt("mMaxRounOpt", mMaxRounOpt);
         outState.putInt("mRoundIndex", mRoundIndex);
@@ -989,8 +974,6 @@ public class ScoreFragment extends Fragment {
             mPlacarDois = savedInstanceState.getInt("mPlacarDois");
             mVitoriasUm = savedInstanceState.getInt("mVitoriasUm");
             mVitoriasDois = savedInstanceState.getInt("mVitoriasDois");
-            mUltimaRodadaUm = savedInstanceState.getInt("mUltimaRodadaUm");
-            mUltimaRodadaDois = savedInstanceState.getInt("mUltimaRodadaDois");
             rodada = savedInstanceState.getInt("rodada");
             mMaxRounOpt = savedInstanceState.getInt("mMaxRounOpt");
             mRoundIndex = savedInstanceState.getInt("mRoundIndex");

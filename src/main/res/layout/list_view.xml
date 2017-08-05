@@ -55,6 +55,11 @@
     ads:adUnitId="ca-app-pub-4711925247199151/5679425415">
     </com.google.android.gms.ads.AdView>
 
+    <!--
+        myLogFragmentBannerId: ca-app-pub-4711925247199151/5679425415
+        testBannerId: ca-app-pub-3940256099942544/6300978111
+    -->
+
 
 
 

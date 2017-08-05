@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Truco! Marcador</string>
+    <string name="app_version">Version 1.1</string>
+    <string name="developer">Bitter Software</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -36,7 +39,6 @@
     <string name="slide_4_desc">Personalize o nome das equipes, estado da tela e o máximo de jogos!</string>
     <string name="slide_4_desc2">Jogue rodadas livres ou configure para melhor de 3, 5 ou 7!</string>
 
-    <string name="app_version">Version 1.0</string>
-    <string name="developer">Bitter Software</string>
+
 
 </resources>
