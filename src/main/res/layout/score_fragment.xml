@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icons"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.app.g503192.conta_truco.MainActivity">
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-4711925247199151/7758793848">
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:background="@color/icons"
+        android:elevation="1dp"
+        tools:showIn="@layout/app_bar_main"
+        android:id="@+id/linearLayout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_light"
+            android:padding="6dp"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/Team1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Nós"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit ="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="24sp" />
+
+
+            <ImageView
+                android:id="@+id/image_icon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:src="@drawable/paus" />
+
+
+            <TextView
+                android:id="@+id/Team2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit ="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Eles"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/placar1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="50sp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="x"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:id="@+id/placar2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="50sp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Vitórias"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/primary_dark"
+                android:textSize="0sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Vitórias"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/vitorias1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="0sp" />
+
+
+            <TextView
+                android:id="@+id/vitorias2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/linearLayout">
+
+    <ScrollView
+        android:id="@+id/scrollPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:nestedScrollingEnabled="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:orientation="horizontal"
+            android:background="@color/icons">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/um1"
+                    style="@style/ButtonsPoints"
+                    android:text="+1"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/tres1"
+                    style="@style/ButtonsPoints"
+                    android:text="+3"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/seis1"
+                    style="@style/ButtonsPoints"
+                    android:text="+6"
+                    android:textAlignment="center" />
+
+
+                <Button
+                    android:id="@+id/nove1"
+                    style="@style/ButtonsPoints"
+                    android:text="+9"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/doze1"
+                    style="@style/ButtonsPoints"
+                    android:text="+12"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/secondary_text"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/um2"
+                    style="@style/ButtonsPoints"
+                    android:text="+1"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/tres2"
+                    style="@style/ButtonsPoints"
+                    android:text="+3"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/seis2"
+                    style="@style/ButtonsPoints"
+                    android:text="+6"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/nove2"
+                    style="@style/ButtonsPoints"
+                    android:text="+9"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/doze2"
+                    style="@style/ButtonsPoints"
+                    android:text="+12"
+                    android:textAlignment="center" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow"
+        android:id="@+id/view" />
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_above="@+id/adView"
+        android:elevation="8dp"
+        app:itemBackground="@color/primary_light"
+        app:itemIconTint="@drawable/bottom_bar_design"
+        app:itemTextColor="@drawable/bottom_bar_design"
+        app:menu="@menu/bottom_navigation_main"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
+

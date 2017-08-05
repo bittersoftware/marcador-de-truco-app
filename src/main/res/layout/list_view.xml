@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_main_page_clist1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+<ListView
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icons"
+    android:layout_above="@+id/adView"
+    android:divider="@color/primary_light"
+    android:dividerHeight="1.0sp"
+    android:id="@+id/list">
+
+<!--     android:dividerHeight="1.0sp"
+    android:padding="5dp" -->
+
+
+</ListView>
+
+    <ImageView
+        android:id="@+id/alertImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_action_name"
+        android:layout_above="@+id/emptyElement"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        />
+
+<TextView
+    android:id="@+id/emptyElement"
+    android:textAlignment="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:text="Termine ao menos uma rodada para acompanhar o histórico"
+    android:textColor="@color/secondary_text"
+    android:textSize="18sp"
+    android:visibility="visible" />
+
+    <com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    ads:adSize="SMART_BANNER"
+    ads:adUnitId="ca-app-pub-4711925247199151/5679425415">
+    </com.google.android.gms.ads.AdView>
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Truco! Marcador</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_help">Ajuda</string>
+    <string name="action_about">Sobre</string>
+
+    <string name="category_main">Placar</string>
+    <string name="category_round">Histórico</string>
+    <string name="category_settings">Opções</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="config_title">Configuração e Instruções</string>
+
+    <!-- TODO: HELP SCREEN -->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Novo Jogo</string>
+    <string name="slide_1_desc">Inicia um novo jogo!</string>
+    <string name="slide_1_desc2">A pontuação, número de vitórias, histórico e registro das mãos serão zerados.</string>
+
+    <string name="slide_2_title">Voltar Jogada</string>
+    <string name="slide_2_desc">Volte a última jogada ou confira todas as mãos da rodada atual em Ver Jogadas!</string>
+    <string name="slide_2_desc2">Marque o checkbox para voltar ao placar inicial sem alterar as vitórias das equipes.</string>
+
+    <string name="slide_3_title">Histórico</string>
+    <string name="slide_3_desc">Tenha o registro do placar de cada rodada na aba Histórico!</string>
+    <string name="slide_3_desc2">Finalize ao menos uma rodada para lançar o registro.</string>
+
+    <string name="slide_4_title">Opções</string>
+    <string name="slide_4_desc">Personalize o nome das equipes, estado da tela e o máximo de jogos!</string>
+    <string name="slide_4_desc2">Jogue rodadas livres ou configure para melhor de 3, 5 ou 7!</string>
+
+    <string name="app_version">Version 1.0</string>
+    <string name="developer">Bitter Software</string>
+
+</resources>

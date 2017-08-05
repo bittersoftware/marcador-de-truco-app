@@ -1,0 +1,257 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/icons"
+    tools:context="com.app.g503192.conta_truco.SettingsFragment">
+
+
+
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/icons">
+
+                <LinearLayout
+                    android:id="@+id/nomeEquipe1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/icons"
+                    android:padding="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Editar Nome das Equipes"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Equipe 1"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary_text"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/llEquipe1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Nome da Equipe 1: "
+                        android:textColor="@color/secondary_text"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNomeEquipe1"
+                    android:textSize="16sp"
+                    android:text="Nós"
+                    android:textColor="@color/secondary_text"/>
+            </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primary_light"/>
+
+                <LinearLayout
+                    android:id="@+id/nomeEquipe2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/icons"
+                    android:padding="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Equipe 2"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary_text"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Nome da Equipe 2: "
+                            android:textColor="@color/secondary_text"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtNomeEquipe2"
+                            android:textSize="16sp"
+                            android:text="Eles"
+                            android:textColor="@color/secondary_text"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primary_light"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/maxRounds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/icons"
+                android:padding="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Editar Máximo de Rodadas"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent"
+                    android:layout_marginBottom="12dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Melhor de 3, 5, 7 ou Livre"
+                    android:textColor="@color/secondary_text"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primary_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@color/icons"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Estado da Tela"
+                    android:textColor="@color/accent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sempre Acesa"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/swithScreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primary_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/icons"
+                android:padding="16dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Retornar para Configuração Padrão"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent"
+                    android:layout_marginBottom="12dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/icons"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:text="Nome das Equipes: Nós, Eles \nMáximo de Rodadas: Livre\nTela: Desligar Automaticamente"
+                        android:textColor="@color/secondary_text"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/defaultButton"
+                        android:text="Reset"
+                        android:textColor="@color/icons"
+                        android:background="@color/primary"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primary_light"/>
+
+        </LinearLayout>
+</ScrollView>
+
+
+    </LinearLayout>
