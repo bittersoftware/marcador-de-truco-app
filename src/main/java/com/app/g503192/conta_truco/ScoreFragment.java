@@ -403,7 +403,7 @@ public class ScoreFragment extends Fragment {
                                                     placar_Um.startAnimation(anim1);
                                                     placar_Dois.startAnimation(anim2);
 
-                                                    checkNullTeamNameonList(rodada, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
+                                                    checkNullTeamNameonList(mRoundIndex, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
 
                                                     RoundHistoryA.add(mPlacarUm);
                                                     RoundHistoryB.add(mPlacarDois);

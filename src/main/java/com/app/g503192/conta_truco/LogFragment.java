@@ -60,7 +60,7 @@ public class LogFragment extends Fragment {
 
         //ADS
         // Place correct AD unit IDs for debug and realease versions
-        
+
 //        myLogFragmentBannerId: ca-app-pub-4711925247199151/5679425415
 //        testBannerId: ca-app-pub-3940256099942544/6300978111
 
