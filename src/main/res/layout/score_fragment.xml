@@ -10,16 +10,25 @@
     tools:context="com.app.g503192.conta_truco.MainActivity">
 
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <!--<com.google.android.gms.ads.AdView-->
+        <!--xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--ads:adSize="SMART_BANNER">-->
+    <!--</com.google.android.gms.ads.AdView>-->
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="ca-app-pub-4711925247199151/7758793848">
-    </com.google.android.gms.ads.AdView>
+        android:layout_alignParentBottom="true">
+    </LinearLayout>
+
 
     <!--
     myScoreFragmentBannerId: ca-app-pub-4711925247199151/7758793848

@@ -7,10 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
@@ -55,13 +58,41 @@ public class LogFragment extends Fragment {
 
         }
 
+        //ADS
+        // Place correct AD unit IDs for debug and realease versions
+        
+//        myLogFragmentBannerId: ca-app-pub-4711925247199151/5679425415
+//        testBannerId: ca-app-pub-3940256099942544/6300978111
 
-        mAdView = (AdView)  rootView.findViewById(R.id.adView);
-        AdRequest request = new AdRequest.Builder()
-                .addTestDevice("33BE2250B43518CCDA7DE426D04EE232")
-                .build();
+        mAdView = new AdView(getActivity());
 
-        mAdView.loadAd(request);
+        if (BuildConfig.DEBUG) {
+            // test ads for a debug build
+            mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+            mAdView.setAdSize(AdSize.SMART_BANNER);
+
+            AdRequest request = new AdRequest.Builder()
+                    .addTestDevice("33BE2250B43518CCDA7DE426D04EE232")
+                    .build();
+
+            if(mAdView.getAdSize() != null || mAdView.getAdUnitId() != null)
+                mAdView.loadAd(request);
+            // else Log state of adsize/adunit
+            ((LinearLayout) rootView.findViewById(R.id.adView)).addView(mAdView);
+
+        }
+        else {
+            // real ads for a release build
+            mAdView.setAdUnitId("ca-app-pub-4711925247199151/5679425415");
+            mAdView.setAdSize(AdSize.SMART_BANNER);
+
+            AdRequest request = new AdRequest.Builder().build();
+
+            if(mAdView.getAdSize() != null || mAdView.getAdUnitId() != null)
+                mAdView.loadAd(request);
+            // else Log state of adsize/adunit
+            ((LinearLayout) rootView.findViewById(R.id.adView)).addView(mAdView);
+        }
 
         return rootView;
 
