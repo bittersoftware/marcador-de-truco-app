@@ -764,7 +764,7 @@ public class ScoreFragment extends Fragment {
         mTeam1 = ((SettingsOptions) getActivity()).getNameTeam1();
         mTeam2 = ((SettingsOptions) getActivity()).getNameTeam2();
 
-        checkNullTeamNameonList(rodada, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
+        //checkNullTeamNameonList(rodada, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
 
         TextView txtEq1 = (TextView) ((Activity)getContext()).findViewById(Team1);
         TextView txtEq2 = (TextView) ((Activity)getContext()).findViewById(Team2);
