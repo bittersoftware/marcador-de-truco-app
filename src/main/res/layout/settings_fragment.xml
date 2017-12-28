@@ -44,7 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
-                        android:text="Equipe 1"
+                        android:text="Nome da Equipe 1"
                         android:textStyle="bold"
                         android:textColor="@color/secondary_text"/>
             <LinearLayout
@@ -52,12 +52,12 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:id="@+id/llEquipe1">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:text="Nome da Equipe 1: "
-                        android:textColor="@color/secondary_text"/>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:text="Nome da Equipe 1: "-->
+                        <!--android:textColor="@color/secondary_text"/>-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
-                        android:text="Equipe 2"
+                        android:text="Nome da Equipe 2"
                         android:textStyle="bold"
                         android:textColor="@color/secondary_text"/>
 
@@ -97,12 +97,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="Nome da Equipe 2: "
-                            android:textColor="@color/secondary_text"/>
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="16sp"-->
+                            <!--android:text="Nome da Equipe 2: "-->
+                            <!--android:textColor="@color/secondary_text"/>-->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    //buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "my.trucoscore.app"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 4
-        versionName "1.14"
+        versionCode 5
+        versionName "1.16"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

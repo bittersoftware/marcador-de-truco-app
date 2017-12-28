@@ -764,7 +764,7 @@ public class ScoreFragment extends Fragment {
         mTeam1 = ((SettingsOptions) getActivity()).getNameTeam1();
         mTeam2 = ((SettingsOptions) getActivity()).getNameTeam2();
 
-        //checkNullTeamNameonList(rodada, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
+        checkNullTeamNameonList(mRoundIndex, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
 
         TextView txtEq1 = (TextView) ((Activity)getContext()).findViewById(Team1);
         TextView txtEq2 = (TextView) ((Activity)getContext()).findViewById(Team2);
@@ -787,7 +787,7 @@ public class ScoreFragment extends Fragment {
 
         Toast.makeText(getContext(), "Novo Jogo Iniciado",Toast.LENGTH_SHORT).show();
 
-        checkNullTeamNameonList(mRoundIndex, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
+        //checkNullTeamNameonList(mRoundIndex, mTeam1, mPlacarUm, mPlacarDois, mTeam2);
     }
 
 
@@ -886,7 +886,7 @@ public class ScoreFragment extends Fragment {
         Team2 = mTeam2;
 
 
-        if ((mTeam1 == null) || (mTeam2 == null)){
+        if ((Team1 == null) || (Team2 == null)){
 
                 if (mTeam1 == null){
                     mTeam1 = "Nós";
